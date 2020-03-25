@@ -8,10 +8,10 @@ data:
       username: system:node:{{EC2PrivateDNSName}}
       rolearn: arn:aws:iam::732365169092:role/UdacityFlaskDeployCBRole
       username: build
-    - groups:
-      - system:masters
-      rolearn: arn:aws:iam::732365169092:role/UdacityFlaskDeployCBRole
+      - rolearn: arn:aws:iam::732365169092:role/UdacityFlaskDeployCBKubectlRole
       username: build
+      groups:
+        - system:masters
   mapUsers: |
     []
 kind: ConfigMap
